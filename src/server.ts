@@ -1,11 +1,10 @@
 import express from 'express';
+import routes from './routes/index';
 
 const app = express();
 
-app.get('/', (req,res) => {
-    return res.send({message: 'AAAAAAAA'})
-})
+app.use(routes);
 
 app.listen(3333, () => {
-    console.log('O MONSTRO TA SAINDO DA JAULA')
-})
+  console.log('O MONSTRO TA SAINDO DA JAULA');
+});
